@@ -4,10 +4,9 @@ import PropTypes from "prop-types";
 function Post(props){
   return (
     <React.Fragment>
-      {/* change */}
       <div onClick = {() => props.whenPostClicked(props.id)}>
-        <h3>{props.location} - {props.names}</h3>
-        <p><em>{props.issue}</em></p>
+        <h3>{props.title}</h3>
+        <p>{props.body}</p>
         <p><em>{props.formattedWaitTime}</em></p>
         <hr/>
       </div>
@@ -16,9 +15,9 @@ function Post(props){
 }
 
 Post.propTypes = {
-  names: PropTypes.string,
-  location: PropTypes.string,
-  issue: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  votes: PropTypes.string,
   id: PropTypes.string,
   whenPostClicked: PropTypes.func,
   formattedWaitTime: PropTypes.string

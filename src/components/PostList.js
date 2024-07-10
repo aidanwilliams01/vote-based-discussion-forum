@@ -8,12 +8,11 @@ function PostList(props){
     <React.Fragment>
       <hr/>
       {Object.values(props.postList).map((post) =>
-        // change
         <Post
           whenPostClicked = { props.onPostSelection }
-          names={post.names}
-          location={post.location}
-          issue={post.issue}
+          title={post.title}
+          body={post.body}
+          votes={post.votes}
           formattedWaitTime={post.formattedWaitTime}
           id={post.id}
           key={post.id}/>

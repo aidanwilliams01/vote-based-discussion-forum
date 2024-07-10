@@ -9,10 +9,9 @@ function NewPostForm(props){
   function handleNewPostFormSubmission(event) {
     event.preventDefault();
     props.onNewPostCreation({
-      // change
-      names: event.target.names.value,
-      location: event.target.location.value,
-      issue: event.target.issue.value,
+      title: event.target.title.value,
+      body: event.target.body.value,
+      votes: 0,
       id: v4(),
       timeOpen: new Date(),
       formattedWaitTime: formatDistanceToNow(new Date(), {
@@ -25,7 +24,7 @@ function NewPostForm(props){
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleNewPostFormSubmission}
-        buttonText="Help!" />
+        buttonText="Post" />
     </React.Fragment>
   );
 }

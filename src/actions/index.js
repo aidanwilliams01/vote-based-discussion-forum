@@ -10,13 +10,12 @@ export const toggleForm = () => ({
 });
 
 export const addPost = (post) => {
-  // change
-  const { names, location, issue, id, formattedWaitTime, timeOpen } = post;
+  const { title, body, votes, id, formattedWaitTime, timeOpen } = post;
   return {
     type: c.ADD_POST,
-    names: names,
-    location: location,
-    issue: issue,
+    title: title,
+    body: body,
+    votes: votes,
     id: id,
     formattedWaitTime: formattedWaitTime,
     timeOpen: timeOpen
@@ -24,7 +23,6 @@ export const addPost = (post) => {
 }
 
 export const updateTime = (id, formattedWaitTime) => ({
-  // change
   type: c.UPDATE_TIME,
   id: id,
   formattedWaitTime: formattedWaitTime

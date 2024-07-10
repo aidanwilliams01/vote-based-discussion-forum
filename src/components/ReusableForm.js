@@ -5,18 +5,15 @@ function ReusableForm(props) {
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
-        {/* change */}
         <input
           type='text'
-          name='names'
-          placeholder='Pair Names' />
-        <input
-          type='text'
-          name='location'
-          placeholder='Location' />
+          name='title'
+          placeholder='Title' />
+        <br />
         <textarea
-          name='issue'
-          placeholder='Describe your issue.' />
+          name='body'
+          placeholder='Body' />
+        <br />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

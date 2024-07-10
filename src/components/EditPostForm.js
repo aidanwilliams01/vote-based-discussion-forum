@@ -8,10 +8,9 @@ function EditPostForm (props) {
   function handleEditPostFormSubmission(event) {
     event.preventDefault();
     props.onEditPost({
-      // change
-      names: event.target.names.value,
-      location: event.target.location.value,
-      issue: event.target.issue.value,
+      title: event.target.title.value,
+      body: event.target.body.value,
+      votes: post.votes,
       id: post.id,
       timeOpen: post.timeOpen,
       formattedWaitTime: post.formattedWaitTime

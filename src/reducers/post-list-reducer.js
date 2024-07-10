@@ -1,15 +1,14 @@
 import * as c from './../actions/ActionTypes';
 
 const reducer = (state = {}, action) => {
-  // change
-  const { names, location, issue, id, formattedWaitTime, timeOpen } = action;
+  const { title, body, votes, id, formattedWaitTime, timeOpen } = action;
   switch (action.type) {
     case c.ADD_POST:
       return Object.assign({}, state, {
         [id]: {
-          names: names,
-          location: location,
-          issue: issue,
+          title: title,
+          body: body,
+          votes: votes,
           id: id,
           timeOpen: timeOpen,
           formattedWaitTime: formattedWaitTime

@@ -17,17 +17,17 @@ describe('Help Queue actions', () => {
 
   it('addPost should create ADD_POST action', () => {
     expect(actions.addPost({
-      names: 'Jo and Jasmine',
-      location: '3E',
-      issue: 'Redux not working!',
+      title: 'test',
+      body: 'test',
+      votes: 0,
       timeOpen: 0,
       formattedWaitTime: 'less than a minute ago',
       id: 1
   })).toEqual({
       type: c.ADD_POST,
-      names: 'Jo and Jasmine',
-      location: '3E',
-      issue: 'Redux not working!',
+      title: 'test',
+      body: 'test',
+      votes: 0,
       timeOpen: 0,
       formattedWaitTime: 'less than a minute ago',
       id: 1

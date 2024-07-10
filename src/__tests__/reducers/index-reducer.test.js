@@ -25,11 +25,10 @@ describe("rootReducer", () => {
 
   test('Check that ADD_POST action works for postListReducer and root reducer', () => {
     const action = {
-      // change
       type: c.ADD_POST,
-      names: 'Ryan & Aimen',
-      location: '4b',
-      issue: 'Redux action is not working correctly.',
+      title: 'test',
+      body: 'test',
+      votes: 0,
       id: 1
     }
     store.dispatch(action);
