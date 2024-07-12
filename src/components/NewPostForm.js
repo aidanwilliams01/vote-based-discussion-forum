@@ -11,7 +11,7 @@ function NewPostForm(props){
     props.onNewPostCreation({
       title: event.target.title.value,
       body: event.target.body.value,
-      votes: 0,
+      votes: '0',
       id: v4(),
       timeOpen: new Date(),
       formattedWaitTime: formatDistanceToNow(new Date(), {

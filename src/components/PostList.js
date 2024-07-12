@@ -13,16 +13,18 @@ function PostList(props){
           title={post.title}
           body={post.body}
           votes={post.votes}
+          timeOpen={post.timeOpen}
           formattedWaitTime={post.formattedWaitTime}
           id={post.id}
-          key={post.id}/>
+          key={post.id}
+          onEditPost={props.onEditPost}/>
       )}
     </React.Fragment>
   );
 }
 
 PostList.propTypes = {
-  postList: PropTypes.object,
+  postList: PropTypes.array,
   onPostSelection: PropTypes.func
 };
 

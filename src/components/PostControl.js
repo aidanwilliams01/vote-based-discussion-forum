@@ -111,7 +111,7 @@ class PostControl extends React.Component {
       currentlyVisibleState = <NewPostForm onNewPostCreation={this.handleAddingNewPostToList} />
       buttonText = "Return to Post List";
     } else {
-      currentlyVisibleState = <PostList postList={this.props.mainPostList} onPostSelection={this.handleChangingSelectedPost} />
+      currentlyVisibleState = <PostList postList={this.props.mainPostList} onPostSelection={this.handleChangingSelectedPost} onEditPost = {this.handleEditingPostInList} />
       buttonText = "Add Post";  
     }
     return (
@@ -130,8 +130,17 @@ PostControl.propTypes = {
 };
 
 const mapStateToProps = state => {
+  const sortedPostList = Object.values(state.mainPostList).sort(function(a, b) {
+    return b.votes - a.votes;
+  });
+  const arrayToObject = (array) =>
+    array.reduce((obj, item) => {
+      obj[item.id] = item
+      return obj
+    }, {})
+  const postListObject = arrayToObject(sortedPostList);
   return {
-    mainPostList: state.mainPostList,
+    mainPostList: postListObject,
     formVisibleOnPage: state.formVisibleOnPage
   }
 }
