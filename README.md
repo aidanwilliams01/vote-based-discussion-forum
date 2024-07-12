@@ -1,6 +1,4 @@
-# (Application Name)
-
-#### (Brief Description of Application)
+# Vote-Based Discussion Forum
 
 #### By Aidan Williams
 
@@ -16,6 +14,8 @@
 * _React_
 
 ## Description
+
+A website where users can add, edit, delete, and upvote/downvote posts on a forum.
 
 ## Setup/Installation Requirements
 

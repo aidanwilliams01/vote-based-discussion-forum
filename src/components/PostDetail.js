@@ -6,7 +6,7 @@ function PostDetail(props){
 
   return (
     <React.Fragment>
-      <h1>Post Detail</h1>
+      {/* <h1>Post Detail</h1> */}
       <h3>{post.title}</h3>
       <p>{post.body}</p>
       <button onClick={ props.onClickingEdit }>Update Post</button>

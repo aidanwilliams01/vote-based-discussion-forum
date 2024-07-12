@@ -24,7 +24,7 @@ function PostList(props){
 }
 
 PostList.propTypes = {
-  postList: PropTypes.array,
+  postList: PropTypes.object,
   onPostSelection: PropTypes.func
 };
 
